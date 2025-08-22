@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaskula Ganesh | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 24px;
+            color: #c084fc;
+        }
+
+        nav a {
+            color: #f8fafc;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .btn-glow {
+            background: #9333ea;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 0 0 15px #9333ea;
+            cursor: pointer;
+        }
+
+        section.hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 10%;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+        }
+
+        .highlight {
+            color: #c084fc;
+        }
+
+        .btn-primary {
+            margin-top: 20px;
+            background: linear-gradient(90deg, #9333ea, #c084fc);
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .hero-img img {
+            width: 350px;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 80px 10%;
+
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #c084fc;
+            margin-bottom: 30px;
+        }
+
+        .projects,
+        .skills {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+        }
+
+        footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 30px 10%;
+        }
+
+        @keyframes fadeInHighlight {
+            0% {
+                transform: scale(0.98);
+                opacity: 0.1;
+                box-shadow: 0 0 10px rgba(255, 0, 255, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0);
+            }
+        }
+
+        .animated-section {
+            animation: fadeInHighlight 0.7s ease-in-out;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header class="navbar">
+        <div class="logo">Vaskula Ganesh</div>
+        <nav>
+            <a href="#about" onclick="animateSection('about')">About</a>
+            <a href="#skills" onclick="animateSection('skills')">Skills</a>
+            <a href="#projects" onclick="animateSection('projects')">Projects</a>
+            <a href="#contact" onclick="animateSection('contact')">Contact</a>
+            <a href="" target="_blank">
+                <button class="btn-glow" onclick="window.open('https://drive.google.com/file/d/1b7aL5zCEVprNnKJhso6d8DuROCiT3bVN/view?usp=drive_link', '_blank')">Resume</button>
+
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hey, I'm <span class="highlight">Vaskula Ganesh</span></h1>
+            <p>B.Tech Graduate | Web Developer | Python Programmer | Passionate about full stack and software development.</p>
+            <a href="#about"><button class="btn-primary">Explore My Work</button></a>
+        </div>
+        <div class="hero-img">
+            <!-- Optional hero image -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>Recent B.Tech graduate skilled in HTML, CSS, JavaScript, MySQL, and Python, seeking an entry-level role as a Frontend, Full Stack, or Software Developer to apply technical skills and grow with the organization.</p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <div class="card">Python</div>
+            <div class="card">MySQL</div>
+            <div class="card">Basics of C & Java</div>
+            <div class="card">HTML5</div>
+            <div class="card">CSS3</div>
+            <div class="card">JavaScript</div>
+            <div class="card">React.js</div>
+            <div class="card">Node.js</div>
+            
+            
+            
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Agricultural Crop Recommendation</h3>
+                <p>Developed an ML-based model to recommend crops based on productivity and season</p>
+            </div>
+            <div class="card">
+                <h3>DailyDoo</h3>
+                <p>Task-tracking web app that helps users manage and complete daily goals with timers.</p>
+            </div>
+            <div class="card">
+                <h3>Focusooze</h3>
+                <p> A website blocker that enhances productivity by restricting site access for a set time..</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:ganeshvaskula18@gmail.com" style="color:#c084fc;">ganeshvaskula18@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ganesh-vaskula-13745122a/" target="_blank" style="color:#c084fc;">linkedin.com/in/ganeshvaskula</a></p>
+        <p>GitHub: <a href="https://github.com/ganeshv61" target="_blank" style="color:#c084fc;">github.com/ganeshv61</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vaskula Ganesh. All rights reserved.</p>
+    </footer>
+
+    <!-- ✅ Working Script -->
+    <script>
+        function animateSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.remove("animated-section");
+            void section.offsetWidth; // reflow trick
+            section.classList.add("animated-section");
+        }
+    </script>
+</body>
+
+
+
+</html>
